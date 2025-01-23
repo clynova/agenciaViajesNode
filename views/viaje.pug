@@ -1,0 +1,39 @@
+extends ./layout/index
+
+block contenido
+    main.container.mt-5 
+        .row 
+            .col-md-5 
+                img(src=`/img/destinos_${resultado.imagen}_ln.jpg`, alt="Imagen Viaje", class="img-fluid")
+            .col-md-7
+                h1 #{resultado.titulo}
+                p 
+                    svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' width='24' height='24' stroke-width='2')
+                        path(d='M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z')
+                        path(d='M16 3v4')
+                        path(d='M8 3v4')
+                        path(d='M4 11h16')
+                        path(d='M11 15h1')
+                        path(d='M12 15v3')
+
+                    |  #{resultado.fecha_ida} - #{resultado.fecha_vuelta}
+
+                p
+                    svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' width='24' height='24' stroke-width='2')
+                        path(d='M3 8v4.172a2 2 0 0 0 .586 1.414l5.71 5.71a2.41 2.41 0 0 0 3.408 0l3.592 -3.592a2.41 2.41 0 0 0 0 -3.408l-5.71 -5.71a2 2 0 0 0 -1.414 -.586h-4.172a2 2 0 0 0 -2 2z')
+                        path(d='M18 19l1.592 -1.592a4.82 4.82 0 0 0 0 -6.816l-4.592 -4.592')
+                        path(d='M7 10h-.01')
+                    |  #{resultado.precio} Dolares
+
+
+
+                p 
+                    svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                        path(d='M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0')
+                        path(d='M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2')
+                        path(d='M16 3.13a4 4 0 0 1 0 7.75')
+                        path(d='M21 21v-2a4 4 0 0 0 -3 -3.85')
+
+                    |  #{resultado.disponibles} Disponibles
+                p 
+                    |  #{resultado.descripcion}           
